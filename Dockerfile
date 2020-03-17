@@ -1,6 +1,6 @@
 FROM archlinux
-# MAINTAINER author brandoncamenisch
-ENV SHELL /bin/bash
+
+ENV SHELL /usr/bin/bash
 
 RUN pacman -Syuv --noconfirm base-devel \
   && useradd --system --create-home barch \
@@ -19,37 +19,10 @@ RUN pacman -Syuv --noconfirm yay
 
 USER barch
 
-RUN yay -S --noconfirm \
-ack \
-antibody \
-asciinema \
-aws-cli \
-aws-vault \
-jq \
-keybase \
-multitail \
-neovim \
-nerd-fonts-dejavu-complete \
-nerd-fonts-noto-sans-mono \
-nerd-fonts-source-code-pro \
-nerd-fonts-terminus \
-pass \
-qrencode \
-ranger \
-task \
-tig \
-tmux \
-tmuxp \
-youtube-dl \
-zbar \
-zsh \
-zsh-autosuggestions \
-zsh-completions \
-zsh-history-substring-search \
-zsh-theme-powerlevel9k
-
 RUN curl -sLf https://spacevim.org/install.sh | bash
 
 WORKDIR /home/barch
 
-CMD ["/usr/bin/zsh"]
+COPY bin/* /usr/local/bin/
+
+CMD ["/usr/bin/bash"]
