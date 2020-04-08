@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-# Update packages
 yay -Syuv --noconfirm \
 ack \
 antibody \
@@ -7,6 +6,7 @@ asciinema \
 aws-cli \
 aws-vault \
 git-extras \
+htop \
 jq \
 keybase \
 multitail \
@@ -35,4 +35,7 @@ zsh-theme-powerlevel9k
 curl -sLf https://spacevim.org/install.sh | bash
 
 # home files
-# 
+# keybase oneshot
+# KEYBASE_ALLOW_ROOT=1
+# --paperkey           DANGEROUS: specify a paper key (or try the KEYBASE_PAPERKEY environment variable)
+   # -u
