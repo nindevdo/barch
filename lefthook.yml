@@ -2,4 +2,4 @@ pre-commit:
   parallel: true
   commands:
     build-docker:
-      run: docker build -t brandoncamenisch/barch
+      run: docker build -t brandoncamenisch/barch .
