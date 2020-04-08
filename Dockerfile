@@ -19,8 +19,6 @@ RUN pacman -Syuv --noconfirm yay
 
 USER barch
 
-RUN curl -sLf https://spacevim.org/install.sh | bash
-
 WORKDIR /home/barch
 
 COPY bin/* /usr/local/bin/

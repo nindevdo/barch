@@ -1,5 +1,6 @@
 #!/usr/bin/bash
-yay -S --noconfirm \
+# Update packages
+yay -Syuv --noconfirm \
 ack \
 antibody \
 asciinema \
@@ -30,4 +31,8 @@ zsh-completions \
 zsh-history-substring-search \
 zsh-theme-powerlevel9k
 
+# @TODO: maybe remove
 curl -sLf https://spacevim.org/install.sh | bash
+
+# home files
+# 
