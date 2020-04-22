@@ -31,11 +31,4 @@ zsh-completions \
 zsh-history-substring-search \
 zsh-theme-powerlevel9k
 
-# @TODO: maybe remove
 curl -sLf https://spacevim.org/install.sh | bash
-
-# home files
-# keybase oneshot
-# KEYBASE_ALLOW_ROOT=1
-# --paperkey           DANGEROUS: specify a paper key (or try the KEYBASE_PAPERKEY environment variable)
-   # -u

@@ -23,4 +23,4 @@ WORKDIR /home/barch
 
 COPY bin/* /usr/local/bin/
 
-CMD ["/usr/bin/zsh"]
+CMD ["/usr/bin/bash"]
