@@ -1,4 +1,4 @@
-FROM archlinux
+FROM archlinux as barch
 
 ENV SHELL /usr/bin/bash
 
@@ -24,3 +24,7 @@ WORKDIR /home/barch
 COPY bin/* /usr/local/bin/
 
 CMD ["/usr/bin/bash"]
+
+FROM barch as fullbarch
+
+RUN barch-install.sh
