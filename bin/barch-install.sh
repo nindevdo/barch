@@ -11,6 +11,7 @@ bugwarrior \
 docker \
 docker-compose \
 git-extras \
+git-lfs \
 git-secrets \
 gnupg \
 grip \
@@ -20,6 +21,7 @@ ipython \
 jq \
 kbfs \
 keybase \
+lsb-release \
 mkfontdir \
 multitail \
 neovim \
@@ -28,19 +30,21 @@ nerd-fonts-noto-sans-mono \
 nerd-fonts-source-code-pro \
 nerd-fonts-terminus \
 node \
-npm \ 
+npm \
+openssh \
 pass \
 pass-otp \
 python-pip \
 qrencode \
 ranger \
 rclone \
+screenfetch \
 task \
 tig \
 timew \
 tmux \
 tmuxp \
-vimproc \
+vim-vimproc-git \
 xkcdpass \
 youtube-dl \
 zbar \
@@ -48,8 +52,7 @@ zsh \
 zsh-autosuggestions \
 zsh-completions \
 zsh-history-substring-search \
+zsh-syntax-highlighting \
 zsh-theme-powerlevel9k
 
-sudo su
-pip install jira 
-su $USER
+sudo pip install jira 

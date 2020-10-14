@@ -2,8 +2,9 @@
 My Arch/BlackArch Linux flavor of Linux Dockerized
 
 ## usage
+
+### Basic
 `docker run -it brandoncamenisch/barch`
-`barch-install.sh`
 
-  317  sudo docker run --network host --privileged --pid=host -v /var/run/docker.sock:/var/run/docker.sock -it brandoncamenisch/barch /bin/bash
-
+### Privileged docker and networking
+`sudo docker run --user $(id -u);$(id -g) --pid=host --network host --privileged -v $PWD/$USER:$HOME -v /var/run/docker.sock:/var/run/docker.sock -it brandoncamenisch/barch`
