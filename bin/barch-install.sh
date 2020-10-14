@@ -22,7 +22,6 @@ jq \
 kbfs \
 keybase \
 lsb-release \
-mkfontdir \
 multitail \
 neovim \
 nerd-fonts-dejavu-complete \
@@ -46,6 +45,7 @@ tmux \
 tmuxp \
 vim-vimproc-git \
 xkcdpass \
+xorg-mkfontscale \
 youtube-dl \
 zbar \
 zsh \
