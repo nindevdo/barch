@@ -5,16 +5,13 @@ antibody \
 asciinema \
 aws-cli \
 aws-vault \
+bashtop \
 git-extras \
 htop \
 jq \
 keybase \
 multitail \
 neovim \
-nerd-fonts-dejavu-complete \
-nerd-fonts-noto-sans-mono \
-nerd-fonts-source-code-pro \
-nerd-fonts-terminus \
 pass \
 qrencode \
 ranger \
@@ -23,6 +20,7 @@ task \
 tig \
 tmux \
 tmuxp \
+tomb \
 youtube-dl \
 zbar \
 zsh \
