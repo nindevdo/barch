@@ -27,6 +27,7 @@ zsh \
 zsh-autosuggestions \
 zsh-completions \
 zsh-history-substring-search \
-zsh-theme-powerlevel9k
+zsh-theme-powerlevel10k
 
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 curl -sLf https://spacevim.org/install.sh | bash
