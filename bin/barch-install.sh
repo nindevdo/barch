@@ -16,6 +16,7 @@ jq \
 keybase \
 multitail \
 neovim \
+ookla-speedtest-bin \
 pass \
 qrencode \
 ranger \
