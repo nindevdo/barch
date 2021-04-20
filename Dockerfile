@@ -9,14 +9,14 @@ RUN pacman -Syuv --noconfirm base-devel \
   && echo 'root:root' | chpasswd \
   && echo 'barch:barch' | chpasswd
 
-RUN pacman -Syuv --noconfirm \ 
-  && curl -O https://blackarch.org/strap.sh \
+#RUN pacman -Syuv --noconfirm \ 
+#  && curl -O https://blackarch.org/strap.sh \
   # shasum should match 062038042c5f141755ea39dbd615e6ff9e23121
-  && sha1sum strap.sh \
-  && chmod +x strap.sh \
-  && ./strap.sh
+#  && sha1sum strap.sh \
+# && chmod +x strap.sh \
+ # && ./strap.sh
 
-RUN pacman -Syuv --noconfirm yay
+#RUN pacman -Syuv --noconfirm yay
 
 USER barch
 
