@@ -1,7 +1,7 @@
 pre-commit:
   commands:
     build-docker:
-      run: docker build -t docker.pkg.github.com/brandoncamenisch/barch/barch:latest .
+      run: docker build -t docker.pkg.github.com/nindevdo/barch/barch:latest .
 
     push-docker:
-      run: docker push docker.pkg.github.com/brandoncamenisch/barch/barch:latest
+      run: docker push docker.pkg.github.com/nindevdo/barch/barch:latest
