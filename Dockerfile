@@ -1,18 +1,33 @@
-FROM archlinux
+FROM archlinux as barch
 
-ENV SHELL /usr/bin/bash
+# Default is barch but should be built with specific user
+ARG USER
 
-RUN pacman -Syuv --noconfirm base-devel git \
-  && useradd --system --create-home barch \
+ENV SHELL /usr/bin/zsh
+
+RUN pacman -Syuv --noconfirm base-devel \
+  && useradd --system --create-home $USER \
   && echo 'ALL ALL = (ALL) NOPASSWD: ALL' >> /etc/sudoers \
-  && echo 'barch ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/barch \
+  && echo "$USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/$USER \
   && echo 'root:root' | chpasswd \
-  && echo 'barch:barch' | chpasswd
+  && echo "$USER:$USER" | chpasswd
 
-USER barch
+RUN pacman -Syuv --noconfirm \ 
+  && curl -O https://blackarch.org/strap.sh \
+  && sha1sum strap.sh \
+  && chmod +x strap.sh \
+  && ./strap.sh
 
-WORKDIR /home/barch
+RUN pacman -Syuv --noconfirm yay
+
+USER $USER
+
+WORKDIR /home/$USER
 
 COPY bin/* /usr/local/bin/
 
-CMD ["/usr/bin/bash"]
+CMD ["/usr/bin/zsh"]
+
+FROM barch as fullbarch
+
+RUN barch-install.sh
