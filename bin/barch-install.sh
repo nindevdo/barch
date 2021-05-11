@@ -59,6 +59,7 @@ zsh-theme-powerlevel10k
 zsh-theme-powerlevel9k
 
 touch .zshrc
+
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 curl -sLf https://spacevim.org/install.sh | bash
