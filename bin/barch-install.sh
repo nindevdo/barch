@@ -31,6 +31,7 @@ neovim \
 node \
 npm \
 openssh \
+ookla-speedtest-bin \
 pass \
 pass-otp \
 python-pip \
@@ -57,7 +58,8 @@ zsh-syntax-highlighting \
 zsh-theme-powerlevel10k
 zsh-theme-powerlevel9k
 
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
+touch .zshrc
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 curl -sLf https://spacevim.org/install.sh | bash
 
