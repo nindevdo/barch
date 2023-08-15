@@ -5,7 +5,6 @@ makepkg -si
 
 yay -Syuv --noconfirm \
 ack \
-antibody \
 asciinema \
 aws-cli \
 aws-vault \
@@ -56,7 +55,6 @@ zsh-completions \
 zsh-history-substring-search \
 zsh-syntax-highlighting \
 zsh-theme-powerlevel10k
-zsh-theme-powerlevel9k
 
 touch .zshrc
 
@@ -64,4 +62,4 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.
 
 curl -sLf https://spacevim.org/install.sh | bash
 
-sudo pip install jira 
+sudo pip install jira

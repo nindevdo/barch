@@ -25,7 +25,3 @@ WORKDIR /home/barch
 COPY bin/* /usr/local/bin/
 
 CMD ["/usr/bin/zsh"]
-
-FROM barch as fullbarch
-
-RUN barch-install.sh
